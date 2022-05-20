@@ -1,0 +1,13 @@
+<script type="text/javascript">
+  function loadHandler(){
+    var container = document.getElementById('container');
+    var contentHeight = container.offsetHeight; //gets page content height
+    var yOffset = window.pageYOffset; //gets vertical scroll position
+    var y = yOffset+window.innerHeight;
+    if(y>=contentHeight){
+      container.innerHTML += '<div class="newData" style="background-color:red"></div>';
+    }
+  }
+  window.onscroll = loadHandler;
+</script>
+<my-app>loading</my-app>
